@@ -1,11 +1,24 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мой сайт</title>
-</head>
-<body>
-    <h1>Добро пожаловать на мой сайт!</h1>
-</body>
-</html>
+import React from "react";
+import { motion } from "framer-motion";
+
+const VenomPage = () => {
+  return (
+    <html>
+      <head>
+        <title>Venom</title>
+      </head>
+      <body className="min-h-screen flex items-center justify-center bg-black">
+        <motion.h1
+          className="text-6xl md:text-9xl font-bold text-purple-500 drop-shadow-lg"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          VENOM
+        </motion.h1>
+      </body>
+    </html>
+  );
+};
+
+export default VenomPage;
