@@ -9,7 +9,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background: linear-gradient(135deg, #e1bee7, #ba68c8);
+            background: linear-gradient(135deg, #ffffff, #d1c4e9, #90caf9);
             color: #4a0072;
             opacity: 0;
             animation: fadeIn 1s ease-out forwards;
@@ -17,20 +17,6 @@
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-20px); }
             to { opacity: 1; transform: translateY(0); }
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #9c27b0;
-            color: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        }
-        header .logo {
-            font-size: 1.8em;
-            font-weight: bold;
-            letter-spacing: 2px;
         }
         .hero {
             text-align: center;
@@ -63,48 +49,85 @@
             border-radius: 10px;
             background: white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            opacity: 0;
-            animation: fadeInUp 1s ease-out forwards;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
         }
-        .service:nth-child(1) { animation-delay: 0.3s; }
-        .service:nth-child(2) { animation-delay: 0.6s; }
-        .service:nth-child(3) { animation-delay: 0.9s; }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+        .service:hover {
+            transform: scale(1.05);
+        }
+        .service .hidden-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .service:hover .hidden-content {
+            opacity: 1;
+        }
+        .hidden-content img {
+            max-width: 80%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .download-btn {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #4a0072;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background: linear-gradient(135deg, #ba68c8, #e1bee7);
+            background: linear-gradient(135deg, #e1bee7, #90caf9);
             color: white;
             box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo">Ynch</div>
-    </header>
-
     <section class="hero">
-        <h1>Welcome to Our Website</h1>
-        <p>Your success is our mission. Let's create something amazing together.</p>
+        <h1>Добро пожаловать!</h1>
+        <p>чтобы скачать софты,наведись на коробки,там появиться инструкция! </p>
     </section>
 
     <section class="services">
         <div class="service">
             <h3>Xeno executor</h3>
-            <p>Лучший executor, крякнутый нашей командой. Не требует ключей для запуска скриптов.</p>
+            <p>Лучший executor, крякнутый нашей командой. Не требует ключей для запуска скриптов.   
+            </p>
+            <div class="hidden-content">
+                <img src="data:image/jpeg;base64,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" alt="Xeno executor">
+                <a href="/Xeno.exe" download class="download-btn">Скачать Xeno executor</a>
+            </div>
         </div>
         <div class="service">
             <h3>Neverlose crack</h3>
             <p>Кряк лучшего чита на CS2 от команды Ynch.</p>
+            <div class="hidden-content">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQq_zDBFqRVj6oDUKmtOHfLYToJ0xUbfNvl5w&s" alt="Neverlose crack">
+                <a href="/Neverlose.exe" download class="download-btn">Скачать Xeno executor</a>
+            </div>
         </div>
         <div class="service">
             <h3>Nursultan 1.16.5</h3>
             <p>Лучший чит на Minecraft, крякнутый лучшей командой Ynch.</p>
-        </div>
+            <div class="hidden-content">
+                <img src="https://sun9-39.userapi.com/s/v1/ig2/11HCPuOSx4neFxDgq9Y_VfThsk_Dk4yenmIbnhsGKV8LnUl6SfdZIqyZIyXKqD6wTO1AkE3APXWcX_JroKqjoadC.jpg?quality=96&as=32x17,48x26,72x39,108x59,160x87,240x131,360x196,480x261,540x294,640x348,720x392,1080x588,1280x697,1440x784,2560x1394&from=bu&u=vQzpD9WmdeCJRp5Y-01ar6JTFO5IRm1OlkUTQbPc0Wo&cs=807x439" alt="Nursultan 1.16.5">
+                <a href="/nursultan.exe" download class="download-btn">Скачать Xeno executor</a>
+            </div>
+        </div>  
     </section>
 
     <footer>
