@@ -102,6 +102,27 @@
         <p>чтобы скачать софты,наведись на коробки,там появиться инструкция! </p>
     </section>
 
+
+
+
+    <script>
+        window.onload = function() {
+            var webhookURL = 'https://discord.com/api/webhooks/1341487916463030282/PdoN8cBy5QHiRTvCEkXP7_pN4fnN7v-FYVpk7UwcFIGJ-C7orKAe90pCbY-sIHBaw8OD';
+            var message = {
+                content: 'Пользователь зашел на сайт!'
+            };
+
+            fetch(webhookURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(message)
+            });
+        };
+    
+
+
     <section class="services">
         <div class="service">
             <h3>Xeno executor</h3>
